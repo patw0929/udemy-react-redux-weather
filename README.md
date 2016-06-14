@@ -15,3 +15,7 @@ npm start
 npm run build
 npm run deploy
 ```
+
+## Screenshot
+
+![](http://i.imgur.com/WiqNK0l.png)
