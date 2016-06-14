@@ -6,3 +6,9 @@
   vertical-align: middle !important;
   text-align: center !important;
 }
+
+.weather-cell--googlemap {
+  composes: weather-cell;
+  width: 200px;
+  height: 200px;
+}
