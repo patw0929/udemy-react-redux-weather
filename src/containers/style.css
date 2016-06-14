@@ -1,0 +1,8 @@
+.search-form {
+  margin: 20px 0;
+}
+
+.weather-cell {
+  vertical-align: middle !important;
+  text-align: center !important;
+}

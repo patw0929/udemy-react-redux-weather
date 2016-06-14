@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { fetchWeather } from '../actions/index';
+import CSSModules from 'react-css-modules';
+import styles from './style.css';
 
 class SearchBar extends Component {
   constructor(props) {
@@ -27,7 +29,7 @@ class SearchBar extends Component {
 
   render() {
     return (
-      <form className="input-group" onSubmit={this.handleSubmit.bind(this)}>
+      <form styleName="search-form" className="input-group" onSubmit={this.handleSubmit.bind(this)}>
         <input type="text"
           value={this.state.term}
           placeholder="Get a five-day forecast in your favorite cities"
@@ -47,4 +49,4 @@ function mapDispatchToProps(dispatch) {
   }, dispatch);
 }
 
-export default connect(null, mapDispatchToProps)(SearchBar);
+export default connect(null, mapDispatchToProps)(CSSModules(SearchBar, styles));

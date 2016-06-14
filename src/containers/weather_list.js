@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Chart from '../components/chart';
+import CSSModules from 'react-css-modules';
+import styles from './style.css';
 
 class WeatherList extends Component {
   constructor(props) {
@@ -18,14 +20,14 @@ class WeatherList extends Component {
 
     return (
       <tr key={name}>
-        <td>{name}</td>
-        <td>
+        <td styleName="weather-cell">{name}</td>
+        <td styleName="weather-cell">
           <Chart data={temps} color={'red'} units="°C" />
         </td>
-        <td>
+        <td styleName="weather-cell">
           <Chart data={pressures} color={'green'} units="hPa" />
         </td>
-        <td>
+        <td styleName="weather-cell">
           <Chart data={humidities} color={'black'} units="%" />
         </td>
       </tr>
@@ -37,10 +39,10 @@ class WeatherList extends Component {
       <table className="table table-hover">
         <thead>
           <tr>
-            <th>City</th>
-            <th>Temperature (°C)</th>
-            <th>Pressure (hPa)</th>
-            <th>Humidity (%)</th>
+            <th styleName="weather-cell">City</th>
+            <th styleName="weather-cell">Temperature (°C)</th>
+            <th styleName="weather-cell">Pressure (hPa)</th>
+            <th styleName="weather-cell">Humidity (%)</th>
           </tr>
         </thead>
         <tbody>
@@ -57,4 +59,4 @@ function mapStateToProps({ weather }) {
   };
 }
 
-export default connect(mapStateToProps)(WeatherList);
+export default connect(mapStateToProps)(CSSModules(WeatherList, styles));
