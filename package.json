@@ -45,6 +45,7 @@
     "react-saga": "^0.2.4",
     "react-sparklines": "^1.5.2",
     "redux": "^3.0.4",
-    "redux-promise": "^0.5.3"
+    "redux-promise": "^0.5.3",
+    "redux-saga": "^0.14.6"
   }
 }
