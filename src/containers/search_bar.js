@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { fetchWeather } from '../actions/index';
+import { fetchWeather } from '../reducers/reducer_weather';
 import CSSModules from 'react-css-modules';
 import styles from './style.css';
 
